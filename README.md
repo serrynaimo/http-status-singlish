@@ -52,6 +52,8 @@ The server successfully processed the request, but is not returning any content.
 The server successfully processed the request, but is not returning any content. Unlike a 204 response, this response requires that the requester reset the document view.
 
 ### 206 Partial Content
+> And then?
+
 The server is delivering only part of the resource (byte serving) due to a range header sent by the client. The range header is used by tools like wget to enable resuming of interrupted downloads, or split a download into multiple simultaneous streams.
 
 ### 207 Multi-Status (WebDAV; RFC 4918)
@@ -84,6 +86,8 @@ This is an example of industry practice contradicting the standard. The HTTP/1.0
 The response to the request can be found under another URI using a GET method. When received in response to a POST (or PUT/DELETE), it should be assumed that the server has received the data and the redirect should be issued with a separate GET message.
 
 ### 304 Not Modified
+> Got already!
+
 Indicates that the resource has not been modified since the version specified by the request headers If-Modified-Since or If-None-Match. This means that there is no need to retransmit the resource, since the client still has a previously-downloaded copy.
 
 ### 305 Use Proxy (since HTTP/1.1)
@@ -116,6 +120,8 @@ Similar to 403 Forbidden, but specifically for use when authentication is requir
 
 ### 402 Payment Required
 > Show me money!
+
+> Buy, buy, buy!
 
 Reserved for future use. The original intention was that this code might be used as part of some form of digital cash or micropayment scheme, but that has not happened, and this code is not usually used. YouTube uses this status if a particular IP address has made excessive requests, and requires the person to enter a CAPTCHA.
 
