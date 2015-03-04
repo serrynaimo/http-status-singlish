@@ -322,6 +322,8 @@ Returned by ArcGIS for Server. A code of 498 indicates an expired or otherwise i
 Used in Nginx logs to indicate when the connection has been closed by client while the server is still processing its request, making server unable to send a status code back.
 
 ### 499 Token required (Esri)
+> Insert cash-card
+
 Returned by ArcGIS for Server. A code of 499 indicates that a token is required (if no token was submitted).
 
 
