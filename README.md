@@ -74,6 +74,8 @@ A user agent may carry out the additional action with no user interaction only i
 
 
 ### 300 Multiple Choices
+> Blur
+
 Indicates multiple options for the resource that the client may follow. It, for instance, could be used to present different format options for video, list files with different extensions, or word sense disambiguation.
 
 ### 301 Moved Permanently
@@ -322,3 +324,7 @@ This status code is not specified in any RFCs, but is used by Microsoft HTTP pro
 
 ### 599 Network connect timeout error (Unknown)
 This status code is not specified in any RFCs, but is used by Microsoft HTTP proxies to signal a network connect timeout behind the proxy to a client in front of the proxy.
+
+
+### 888 
+> Huat, ah
