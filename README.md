@@ -35,6 +35,8 @@ This class of status codes indicates the action requested by the client was rece
 Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.
 
 ### 201 Created
+> Nah! I make for you!
+
 The request has been fulfilled and resulted in a new resource being created.
 
 ### 202 Accepted
@@ -43,6 +45,8 @@ The request has been fulfilled and resulted in a new resource being created.
 The request has been accepted for processing, but the processing has not been completed. The request might or might not eventually be acted upon, as it might be disallowed when processing actually takes place.
 
 ### 203 Non-Authoritative Information (since HTTP/1.1)
+> I also dunno from where one!
+
 The server successfully processed the request, but is returning information that may be from another source.
 
 ### 204 No Content
@@ -79,6 +83,8 @@ A user agent may carry out the additional action with no user interaction only i
 Indicates multiple options for the resource that the client may follow. It, for instance, could be used to present different format options for video, list files with different extensions, or word sense disambiguation.
 
 ### 301 Moved Permanently
+> Change liao!
+
 This and all future requests should be directed to the given URI.
 
 ### 302 Found
@@ -99,9 +105,11 @@ The requested resource is only available through a proxy, whose address is provi
 No longer used. Originally meant "Subsequent requests should use the specified proxy."
 
 ### 307 Temporary Redirect (since HTTP/1.1)
+
 In this case, the request should be repeated with another URI; however, future requests should still use the original URI. In contrast to how 302 was historically implemented, the request method is not allowed to be changed when reissuing the original request. For instance, a POST request should be repeated using another POST request.
 
 ### 308 Permanent Redirect (Experimental RFC; RFC 7238)
+
 The request, and all future requests should be repeated using another URI. 307 and 308 (as proposed) parallel the behaviours of 302 and 301, but do not allow the HTTP method to change. So, for example, submitting a form to a permanently redirected resource may continue smoothly.
 
 
@@ -152,9 +160,13 @@ The client must first authenticate itself with the proxy.
 The server timed out waiting for the request. According to HTTP specifications: "The client did not produce a request within the time that the server was prepared to wait. The client MAY repeat the request without modifications at any later time."
 
 ### 409 Conflict
+> Jialat!
+
 Indicates that the request could not be processed because of conflict in the request, such as an edit conflict in the case of multiple updates.
 
 ### 410 Gone
+> No more liao!
+
 Indicates that the resource requested is no longer available and will not be available again. This should be used when a resource has been intentionally removed and the resource should be purged. Upon receiving a 410 status code, the client should not request the resource again in the future. Clients such as search engines should remove the resource from their indices. Most use cases do not require clients and search engines to purge the resource, and a "404 Not Found" may be used instead.
 
 ### 411 Length Required
@@ -164,6 +176,8 @@ The request did not specify the length of its content, which is required by the 
 The server does not meet one of the preconditions that the requester put on the request.
 
 ### 413 Request Entity Too Large
+> Wha! So big!
+
 The request is larger than the server is willing or able to process.
 
 ### 414 Request-URI Too Long
@@ -179,6 +193,8 @@ The client has asked for a portion of the file (byte serving), but the server ca
 The server cannot meet the requirements of the Expect request-header field.
 
 ### 418 I'm a teapot (RFC 2324)
+> Teh-O-kosong
+
 This code was defined in 1998 as one of the traditional IETF April Fools' jokes, in RFC 2324, Hyper Text Coffee Pot Control Protocol, and is not expected to be implemented by actual HTTP servers. The RFC specifies this code should be returned by tea pots requested to brew coffee.
 
 ### 419 Authentication Timeout (not in RFC 2616)
