@@ -204,6 +204,8 @@ The client should switch to a different protocol such as TLS/1.0.
 The origin server requires the request to be conditional. Intended to prevent "the 'lost update' problem, where a client GETs a resource's state, modifies it, and PUTs it back to the server, when meanwhile a third party has modified the state on the server, leading to a conflict."
 
 ### 429 Too Many Requests (RFC 6585)
+>  Don't pangseh me hor
+
 The user has sent too many requests in a given amount of time. Intended for use with rate limiting schemes.
 
 ### 431 Request Header Fields Too Large (RFC 6585)
@@ -225,6 +227,8 @@ A Microsoft extension. This error is given when Windows Parental Controls are tu
 Defined in the internet draft "A New HTTP Status Code for Legally-restricted Resources". Intended to be used when resource access is denied for legal reasons, e.g. censorship or government-mandated blocked access. A reference to the 1953 dystopian novel Fahrenheit 451, where books are outlawed.
 
 ### 451 Redirect (Microsoft)
+> Kuah simi kuah
+
 Used in Exchange ActiveSync if there either is a more efficient server to use or the server cannot access the users' mailbox.
 The client is supposed to re-run the HTTP Autodiscovery protocol to find a better suited server.
 
@@ -239,6 +243,7 @@ The client is supposed to re-run the HTTP Autodiscovery protocol to find a bette
 ### 456 Header Field Not Valid for Resource
 
 ### 457 Invalid Range
+> Sibei Jialat
 
 ### 458 Parameter Is Read-Only
 
@@ -282,6 +287,8 @@ Response status codes beginning with the digit "5" indicate cases in which the s
 
 
 ### 500 Internal Server Error
+> Salah
+
 A generic error message, given when an unexpected condition was encountered and no more specific message is suitable.
 
 ### 501 Not Implemented
@@ -297,6 +304,8 @@ The server is currently unavailable (because it is overloaded or down for mainte
 The server was acting as a gateway or proxy and did not receive a timely response from the upstream server.
 
 ### 505 HTTP Version Not Supported
+> Buay tahan, lah
+
 The server does not support the HTTP protocol version used in the request.
 
 ### 506 Variant Also Negotiates (RFC 2295)
