@@ -141,6 +141,8 @@ The requested resource could not be found but may be available again in the futu
 A request was made of a resource using a request method not supported by that resource; for example, using GET on a form which requires data to be presented via POST, or using PUT on a read-only resource.
 
 ### 406 Not Acceptable
+> Not nice sia
+
 The requested resource is only capable of generating content not acceptable according to the Accept headers sent in the request.
 
 ### 407 Proxy Authentication Required
