@@ -50,6 +50,8 @@ The request has been accepted for processing, but the processing has not been co
 The server successfully processed the request, but is returning information that may be from another source.
 
 ### 204 No Content
+> Nothing inside leh
+
 The server successfully processed the request, but is not returning any content. Usually used as a response to a successful delete request.
 
 ### 205 Reset Content
@@ -88,6 +90,8 @@ Indicates multiple options for the resource that the client may follow. It, for 
 This and all future requests should be directed to the given URI.
 
 ### 302 Found
+> Find oredi
+
 This is an example of industry practice contradicting the standard. The HTTP/1.0 specification (RFC 1945) required the client to perform a temporary redirect (the original describing phrase was "Moved Temporarily"), but popular browsers implemented 302 with the functionality of a 303 See Other. Therefore, HTTP/1.1 added status codes 303 and 307 to distinguish between the two behaviours. However, some Web applications and frameworks use the 302 status code as if it were the 303.
 
 ### 303 See Other (since HTTP/1.1)
@@ -129,14 +133,14 @@ The server cannot or will not process the request due to something that is perce
 Similar to 403 Forbidden, but specifically for use when authentication is required and has failed or has not yet been provided. The response must include a WWW-Authenticate header field containing a challenge applicable to the requested resource. See Basic access authentication and Digest access authentication.
 
 ### 402 Payment Required
-> Show me money!
+> You think what, free ah?
 
-> Buy, buy, buy!
+> Owe money pay money
 
 Reserved for future use. The original intention was that this code might be used as part of some form of digital cash or micropayment scheme, but that has not happened, and this code is not usually used. YouTube uses this status if a particular IP address has made excessive requests, and requires the person to enter a CAPTCHA.
 
 ### 403 Forbidden
-> Can not
+> Cannot
 
 The request was a valid request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference.
 
@@ -146,6 +150,8 @@ The request was a valid request, but the server is refusing to respond to it. Un
 The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible.
 
 ### 405 Method Not Allowed
+> Like this cannot
+
 A request was made of a resource using a request method not supported by that resource; for example, using GET on a form which requires data to be presented via POST, or using PUT on a read-only resource.
 
 ### 406 Not Acceptable
@@ -181,9 +187,13 @@ The server does not meet one of the preconditions that the requester put on the 
 The request is larger than the server is willing or able to process.
 
 ### 414 Request-URI Too Long
+> You type so much for what?
+
 The URI provided was too long for the server to process. Often the result of too much data being encoded as a query-string of a GET request, in which case it should be converted to a POST request.
 
 ### 415 Unsupported Media Type
+> CD can not play
+
 The request entity has a media type which the server or resource does not support. For example, the client uploads an image as image/svg+xml, but the server requires that images use a different format.
 
 ### 416 Requested Range Not Satisfiable
@@ -206,25 +216,33 @@ Not a part of the HTTP standard, 419 Authentication Timeout denotes that previou
 Not part of the HTTP standard, but defined by Spring in the HttpStatus class to be used when a method failed. This status code is deprecated by Spring.
 
 ### 420 Enhance Your Calm (Twitter)
+> Chill ah bro
+
 Not part of the HTTP standard, but returned by version 1 of the Twitter Search and Trends API when the client is being rate limited. Other services may wish to implement the 429 Too Many Requests response code instead.
 
 ### 422 Unprocessable Entity (WebDAV; RFC 4918)
+> Too cheem oredi
+
 The request was well-formed but was unable to be followed due to semantic errors.
 
 ### 423 Locked (WebDAV; RFC 4918)
+> Cannot open
+
 The resource that is being accessed is locked.
 
 ### 424 Failed Dependency (WebDAV; RFC 4918)
 The request failed due to failure of a previous request (e.g., a PROPPATCH).
 
 ### 426 Upgrade Required
+> Must upgrade one
+
 The client should switch to a different protocol such as TLS/1.0.
 
 ### 428 Precondition Required (RFC 6585)
 The origin server requires the request to be conditional. Intended to prevent "the 'lost update' problem, where a client GETs a resource's state, modifies it, and PUTs it back to the server, when meanwhile a third party has modified the state on the server, leading to a conflict."
 
 ### 429 Too Many Requests (RFC 6585)
->  Don't pangseh me hor
+>  Dun pangseh me hor
 
 The user has sent too many requests in a given amount of time. Intended for use with rate limiting schemes.
 
@@ -244,6 +262,8 @@ A Microsoft extension. The request should be retried after performing the approp
 A Microsoft extension. This error is given when Windows Parental Controls are turned on and are blocking access to the given webpage.
 
 ### 451 Unavailable For Legal Reasons (Internet draft)
+> Limpeh sure sue one
+
 Defined in the internet draft "A New HTTP Status Code for Legally-restricted Resources". Intended to be used when resource access is denied for legal reasons, e.g. censorship or government-mandated blocked access. A reference to the 1953 dystopian novel Fahrenheit 451, where books are outlawed.
 
 ### 451 Redirect (Microsoft)
@@ -255,8 +275,10 @@ The client is supposed to re-run the HTTP Autodiscovery protocol to find a bette
 ### 452 Conference Not Found
 
 ### 453 Not Enough Bandwidth
+> Overload oredi. Sorry Singtel, not MyRepublic
 
 ### 454 Session Not Found
+> Where got session?
 
 ### 455 Method Not Valid in This State
 
@@ -268,12 +290,16 @@ The client is supposed to re-run the HTTP Autodiscovery protocol to find a bette
 ### 458 Parameter Is Read-Only
 
 ### 459 Aggregate operation not allowed
+> Limpeh say cannot gather gather like this ah
 
 ### 460 Only aggregate operation allowed
+> Limpeh say must gather gather
 
 ### 461 Unsupported transport
+> 
 
 ### 462 Destination unreachable
+> 
 
 ### 463 Key management Failure
 
@@ -307,17 +333,21 @@ Response status codes beginning with the digit "5" indicate cases in which the s
 
 
 ### 500 Internal Server Error
-> Salah
+> Salah server down
 
 A generic error message, given when an unexpected condition was encountered and no more specific message is suitable.
 
 ### 501 Not Implemented
+> Never build liao
+
 The server either does not recognize the request method, or it lacks the ability to fulfil the request. Usually this implies future availability (e.g., a new feature of a web-service API).
 
 ### 502 Bad Gateway
 The server was acting as a gateway or proxy and received an invalid response from the upstream server.
 
 ### 503 Service Unavailable
+> Train stop oredi
+
 The server is currently unavailable (because it is overloaded or down for maintenance). Generally, this is a temporary state.
 
 ### 504 Gateway Timeout
