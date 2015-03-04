@@ -38,7 +38,7 @@ Standard response for successful HTTP requests. The actual response will depend 
 The request has been fulfilled and resulted in a new resource being created.
 
 ### 202 Accepted
-> Boleh!
+> Oso can
 
 The request has been accepted for processing, but the processing has not been completed. The request might or might not eventually be acted upon, as it might be disallowed when processing actually takes place.
 
@@ -123,7 +123,7 @@ Reserved for future use. The original intention was that this code might be used
 The request was a valid request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference.
 
 ### 404 Not Found
-> Don't have
+> Dun have
 
 The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible.
 
