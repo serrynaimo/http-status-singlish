@@ -174,6 +174,8 @@ The request entity has a media type which the server or resource does not suppor
 The client has asked for a portion of the file (byte serving), but the server cannot supply that portion. For example, if the client asked for a part of the file that lies beyond the end of the file.
 
 ### 417 Expectation Failed
+> Why you like dat!
+
 The server cannot meet the requirements of the Expect request-header field.
 
 ### 418 I'm a teapot (RFC 2324)
