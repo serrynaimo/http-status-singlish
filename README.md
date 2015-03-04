@@ -10,15 +10,20 @@ This class of status code indicates a provisional response, consisting only of t
 
 
 ### 100 Continue
+> Chop, chop!
+
 This means that the server has received the request headers, and that the client should proceed to send the request body (in the case of a request for which a body needs to be sent; for example, a POST request). If the request body is large, sending it to a server when a request has already been rejected based upon inappropriate headers is inefficient. To have a server check if the request could be accepted based on the request's headers alone, a client must send Expect: 100-continue as a header in its initial request and check if a 100 Continue status code is received in response before continuing (or receive 417 Expectation Failed and not continue).
 
 ### 101 Switching Protocols
+> Speak English?
+
 This means the requester has asked the server to switch protocols and the server is acknowledging that it will do so.
 
 ### 102 Processing (WebDAV; RFC 2518)
-> Can not see? Busy, lah
+> Can not see? Busy, lah.
 
 As a WebDAV request may contain many sub-requests involving file operations, it may take a long time to complete the request. This code indicates that the server has received and is processing the request, but no response is available yet. This prevents the client from timing out and assuming the request was lost.
+
 
 ## 2xx Success
 
@@ -33,6 +38,8 @@ Standard response for successful HTTP requests. The actual response will depend 
 The request has been fulfilled and resulted in a new resource being created.
 
 ### 202 Accepted
+> Boleh!
+
 The request has been accepted for processing, but the processing has not been completed. The request might or might not eventually be acted upon, as it might be disallowed when processing actually takes place.
 
 ### 203 Non-Authoritative Information (since HTTP/1.1)
@@ -98,7 +105,7 @@ The 4xx class of status code is intended for cases in which the client seems to 
 
 
 ### 400 Bad Request
-> Can not
+> Hah?
 
 The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).
 
@@ -121,6 +128,8 @@ The request was a valid request, but the server is refusing to respond to it. Un
 The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible.
 
 ### 405 Method Not Allowed
+> Can not
+
 A request was made of a resource using a request method not supported by that resource; for example, using GET on a form which requires data to be presented via POST, or using PUT on a read-only resource.
 
 ### 406 Not Acceptable
