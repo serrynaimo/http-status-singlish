@@ -1,2 +1,4 @@
-# http-errors-singlish
-Well, it's HTTP error messages in Singlish
+# http-status-singlish
+Well, it's HTTP status messages in Singlish
+
+
