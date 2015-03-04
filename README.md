@@ -110,6 +110,8 @@ The 4xx class of status code is intended for cases in which the client seems to 
 The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).
 
 ### 401 Unauthorized
+> You think you what? Father site?
+
 Similar to 403 Forbidden, but specifically for use when authentication is required and has failed or has not yet been provided. The response must include a WWW-Authenticate header field containing a challenge applicable to the requested resource. See Basic access authentication and Digest access authentication.
 
 ### 402 Payment Required
@@ -118,7 +120,7 @@ Similar to 403 Forbidden, but specifically for use when authentication is requir
 Reserved for future use. The original intention was that this code might be used as part of some form of digital cash or micropayment scheme, but that has not happened, and this code is not usually used. YouTube uses this status if a particular IP address has made excessive requests, and requires the person to enter a CAPTCHA.
 
 ### 403 Forbidden
-> You think you what? Father site?
+> Can not
 
 The request was a valid request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference.
 
@@ -128,8 +130,6 @@ The request was a valid request, but the server is refusing to respond to it. Un
 The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible.
 
 ### 405 Method Not Allowed
-> Can not
-
 A request was made of a resource using a request method not supported by that resource; for example, using GET on a form which requires data to be presented via POST, or using PUT on a read-only resource.
 
 ### 406 Not Acceptable
