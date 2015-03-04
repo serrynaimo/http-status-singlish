@@ -174,6 +174,8 @@ The request did not specify the length of its content, which is required by the 
 The server does not meet one of the preconditions that the requester put on the request.
 
 ### 413 Request Entity Too Large
+> Wha! So big!
+
 The request is larger than the server is willing or able to process.
 
 ### 414 Request-URI Too Long
@@ -189,6 +191,8 @@ The client has asked for a portion of the file (byte serving), but the server ca
 The server cannot meet the requirements of the Expect request-header field.
 
 ### 418 I'm a teapot (RFC 2324)
+> Teh-O-kosong
+
 This code was defined in 1998 as one of the traditional IETF April Fools' jokes, in RFC 2324, Hyper Text Coffee Pot Control Protocol, and is not expected to be implemented by actual HTTP servers. The RFC specifies this code should be returned by tea pots requested to brew coffee.
 
 ### 419 Authentication Timeout (not in RFC 2616)
