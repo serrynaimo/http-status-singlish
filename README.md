@@ -95,6 +95,8 @@ This and all future requests should be directed to the given URI.
 This is an example of industry practice contradicting the standard. The HTTP/1.0 specification (RFC 1945) required the client to perform a temporary redirect (the original describing phrase was "Moved Temporarily"), but popular browsers implemented 302 with the functionality of a 303 See Other. Therefore, HTTP/1.1 added status codes 303 and 307 to distinguish between the two behaviours. However, some Web applications and frameworks use the 302 status code as if it were the 303.
 
 ### 303 See Other (since HTTP/1.1)
+> Not here la. Over there!
+
 The response to the request can be found under another URI using a GET method. When received in response to a POST (or PUT/DELETE), it should be assumed that the server has received the data and the redirect should be issued with a separate GET message.
 
 ### 304 Not Modified
@@ -109,10 +111,12 @@ The requested resource is only available through a proxy, whose address is provi
 No longer used. Originally meant "Subsequent requests should use the specified proxy."
 
 ### 307 Temporary Redirect (since HTTP/1.1)
+> Road block la.
 
 In this case, the request should be repeated with another URI; however, future requests should still use the original URI. In contrast to how 302 was historically implemented, the request method is not allowed to be changed when reissuing the original request. For instance, a POST request should be repeated using another POST request.
 
 ### 308 Permanent Redirect (Experimental RFC; RFC 7238)
+> Road close liao.
 
 The request, and all future requests should be repeated using another URI. 307 and 308 (as proposed) parallel the behaviours of 302 and 301, but do not allow the HTTP method to change. So, for example, submitting a form to a permanently redirected resource may continue smoothly.
 
@@ -160,9 +164,13 @@ A request was made of a resource using a request method not supported by that re
 The requested resource is only capable of generating content not acceptable according to the Accept headers sent in the request.
 
 ### 407 Proxy Authentication Required
+> Got scan card or not?
+
 The client must first authenticate itself with the proxy.
 
 ### 408 Request Timeout
+> Wait arh. Wait arh... Wait... Zzz.
+
 The server timed out waiting for the request. According to HTTP specifications: "The client did not produce a request within the time that the server was prepared to wait. The client MAY repeat the request without modifications at any later time."
 
 ### 409 Conflict
@@ -179,6 +187,8 @@ Indicates that the resource requested is no longer available and will not be ava
 The request did not specify the length of its content, which is required by the requested resource.
 
 ### 412 Precondition Failed
+> I cannot do. Not trained.
+
 The server does not meet one of the preconditions that the requester put on the request.
 
 ### 413 Request Entity Too Large
@@ -197,6 +207,8 @@ The URI provided was too long for the server to process. Often the result of too
 The request entity has a media type which the server or resource does not support. For example, the client uploads an image as image/svg+xml, but the server requires that images use a different format.
 
 ### 416 Requested Range Not Satisfiable
+> Eh. Can only find this much nia.
+
 The client has asked for a portion of the file (byte serving), but the server cannot supply that portion. For example, if the client asked for a part of the file that lies beyond the end of the file.
 
 ### 417 Expectation Failed
@@ -210,6 +222,8 @@ The server cannot meet the requirements of the Expect request-header field.
 This code was defined in 1998 as one of the traditional IETF April Fools' jokes, in RFC 2324, Hyper Text Coffee Pot Control Protocol, and is not expected to be implemented by actual HTTP servers. The RFC specifies this code should be returned by tea pots requested to brew coffee.
 
 ### 419 Authentication Timeout (not in RFC 2616)
+> Oi. Scan your card again.
+
 Not a part of the HTTP standard, 419 Authentication Timeout denotes that previously valid authentication has expired. It is used as an alternative to 401 Unauthorized in order to differentiate from otherwise authenticated clients being denied access to specific server resources.
 
 ### 420 Method Failure (Spring Framework)
@@ -247,9 +261,13 @@ The origin server requires the request to be conditional. Intended to prevent "t
 The user has sent too many requests in a given amount of time. Intended for use with rate limiting schemes.
 
 ### 431 Request Header Fields Too Large (RFC 6585)
+> Your head big ah?
+
 The server is unwilling to process the request because either an individual header field, or all the header fields collectively, are too large.
 
 ### 440 Login Timeout (Microsoft)
+> Time up liao.
+
 A Microsoft extension. Indicates that your session has expired.
 
 ### 444 No Response (Nginx)
@@ -259,6 +277,8 @@ Used in Nginx logs to indicate that the server has returned no information to th
 A Microsoft extension. The request should be retried after performing the appropriate action.
 
 ### 450 Blocked by Windows Parental Controls (Microsoft)
+> Daddy say cannot do one.
+
 A Microsoft extension. This error is given when Windows Parental Controls are turned on and are blocking access to the given webpage.
 
 ### 451 Unavailable For Legal Reasons (Internet draft)
@@ -273,6 +293,7 @@ Used in Exchange ActiveSync if there either is a more efficient server to use or
 The client is supposed to re-run the HTTP Autodiscovery protocol to find a better suited server.
 
 ### 452 Conference Not Found
+> Empty ah? Everybody leh?
 
 ### 453 Not Enough Bandwidth
 > Overload oredi. Sorry Singtel, not MyRepublic
@@ -283,6 +304,7 @@ The client is supposed to re-run the HTTP Autodiscovery protocol to find a bette
 ### 455 Method Not Valid in This State
 
 ### 456 Header Field Not Valid for Resource
+> Tao nao pai sibo
 
 ### 457 Invalid Range
 > Sibei Jialat
@@ -296,10 +318,10 @@ The client is supposed to re-run the HTTP Autodiscovery protocol to find a bette
 > Limpeh say must gather gather
 
 ### 461 Unsupported transport
-> 
+> Sorry la, bro! Can only seat four nia.
 
 ### 462 Destination unreachable
-> 
+> Tekong, how to go? I taxi leh.
 
 ### 463 Key management Failure
 
