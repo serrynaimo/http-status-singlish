@@ -175,6 +175,8 @@ The server timed out waiting for the request. According to HTTP specifications: 
 ### 409 Conflict
 > Jialat!
 
+> Siao liao
+
 Indicates that the request could not be processed because of conflict in the request, such as an edit conflict in the case of multiple updates.
 
 ### 410 Gone
@@ -325,6 +327,7 @@ The client is supposed to re-run the HTTP Autodiscovery protocol to find a bette
 ### 463 Key management Failure
 
 ### 494 Request Header Too Large (Nginx)
+> Engine no power (Nginx)
 Nginx internal code similar to 431 but it was introduced earlier in version 0.9.4 (on January 21, 2011).
 
 ### 495 Cert Error (Nginx)
@@ -388,6 +391,8 @@ Transparent content negotiation for the request esults in a circular reference.
 The server is unable to store the representation needed to complete the request.
 
 ### 508 Loop Detected (WebDAV; RFC 5842)
+> Wah! Rollercoaster leh! Wah! Roller- (DAV)
+
 The server detected an infinite loop while processing the request (sent in lieu of 208 Already Reported).
 
 ### 509 Bandwidth Limit Exceeded (Apache bw/limited extension)
