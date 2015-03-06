@@ -1,6 +1,5 @@
 # http-status-singlish
-Well, it's HTTP status messages in Singlish
-
+HTTP status messages in Singlish lor. What else you want.
 
 ## 1xx Informational
 
@@ -80,7 +79,7 @@ A user agent may carry out the additional action with no user interaction only i
 
 
 ### 300 Multiple Choices
-> Blur
+> Wait, I blur...
 
 Indicates multiple options for the resource that the client may follow. It, for instance, could be used to present different format options for video, list files with different extensions, or word sense disambiguation.
 
