@@ -234,12 +234,12 @@ Not part of the HTTP standard, but defined by Spring in the HttpStatus class to 
 Not part of the HTTP standard, but returned by version 1 of the Twitter Search and Trends API when the client is being rate limited. Other services may wish to implement the 429 Too Many Requests response code instead.
 
 ### 422 Unprocessable Entity (WebDAV; RFC 4918)
-> Too cheem oredi
+> Too cheem oredi (DAV)
 
 The request was well-formed but was unable to be followed due to semantic errors.
 
 ### 423 Locked (WebDAV; RFC 4918)
-> Cannot open
+> Cannot open (DAV)
 
 The resource that is being accessed is locked.
 
@@ -343,7 +343,7 @@ Returned by ArcGIS for Server. A code of 498 indicates an expired or otherwise i
 Used in Nginx logs to indicate when the connection has been closed by client while the server is still processing its request, making server unable to send a status code back.
 
 ### 499 Token required (Esri)
-> Insert cash-card
+> Insert cash-card (ArcGIS)
 
 Returned by ArcGIS for Server. A code of 499 indicates that a token is required (if no token was submitted).
 
