@@ -328,6 +328,7 @@ The client is supposed to re-run the HTTP Autodiscovery protocol to find a bette
 
 ### 494 Request Header Too Large (Nginx)
 > Engine no power (Nginx)
+
 Nginx internal code similar to 431 but it was introduced earlier in version 0.9.4 (on January 21, 2011).
 
 ### 495 Cert Error (Nginx)
