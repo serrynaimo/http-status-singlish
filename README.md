@@ -1,6 +1,5 @@
 # http-status-singlish
-Well, it's HTTP status messages in Singlish
-
+HTTP status messages in Singlish lor. What else you want.
 
 ## 1xx Informational
 
@@ -80,7 +79,7 @@ A user agent may carry out the additional action with no user interaction only i
 
 
 ### 300 Multiple Choices
-> Blur
+> Wait, I blur...
 
 Indicates multiple options for the resource that the client may follow. It, for instance, could be used to present different format options for video, list files with different extensions, or word sense disambiguation.
 
@@ -176,6 +175,8 @@ The server timed out waiting for the request. According to HTTP specifications: 
 ### 409 Conflict
 > Jialat!
 
+> Siao liao
+
 Indicates that the request could not be processed because of conflict in the request, such as an edit conflict in the case of multiple updates.
 
 ### 410 Gone
@@ -235,12 +236,12 @@ Not part of the HTTP standard, but defined by Spring in the HttpStatus class to 
 Not part of the HTTP standard, but returned by version 1 of the Twitter Search and Trends API when the client is being rate limited. Other services may wish to implement the 429 Too Many Requests response code instead.
 
 ### 422 Unprocessable Entity (WebDAV; RFC 4918)
-> Too cheem oredi
+> Too cheem oredi (DAV)
 
 The request was well-formed but was unable to be followed due to semantic errors.
 
 ### 423 Locked (WebDAV; RFC 4918)
-> Cannot open
+> Cannot open (DAV)
 
 The resource that is being accessed is locked.
 
@@ -326,6 +327,8 @@ The client is supposed to re-run the HTTP Autodiscovery protocol to find a bette
 ### 463 Key management Failure
 
 ### 494 Request Header Too Large (Nginx)
+> Engine no power (Nginx)
+
 Nginx internal code similar to 431 but it was introduced earlier in version 0.9.4 (on January 21, 2011).
 
 ### 495 Cert Error (Nginx)
@@ -344,7 +347,7 @@ Returned by ArcGIS for Server. A code of 498 indicates an expired or otherwise i
 Used in Nginx logs to indicate when the connection has been closed by client while the server is still processing its request, making server unable to send a status code back.
 
 ### 499 Token required (Esri)
-> Insert cash-card
+> Insert cash-card (ArcGIS)
 
 Returned by ArcGIS for Server. A code of 499 indicates that a token is required (if no token was submitted).
 
@@ -389,6 +392,8 @@ Transparent content negotiation for the request esults in a circular reference.
 The server is unable to store the representation needed to complete the request.
 
 ### 508 Loop Detected (WebDAV; RFC 5842)
+> Wah! Rollercoaster leh! Wah! Roller- (DAV)
+
 The server detected an infinite loop while processing the request (sent in lieu of 208 Already Reported).
 
 ### 509 Bandwidth Limit Exceeded (Apache bw/limited extension)
