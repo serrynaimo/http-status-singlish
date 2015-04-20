@@ -9,17 +9,17 @@ This class of status code indicates a provisional response, consisting only of t
 
 
 ### 100 Continue
-> Chop, chop!
+> Chop, chop, kalipok!
 
 This means that the server has received the request headers, and that the client should proceed to send the request body (in the case of a request for which a body needs to be sent; for example, a POST request). If the request body is large, sending it to a server when a request has alreaady been rejected based upon inappropriate headers is inefficient. To have a server check if the request could be accepted based on the request's headers alone, a client must send Expect: 100-continue as a header in its initial request and check if a 100 Continue status code is received in response before continuing (or receive 417 Expectation Failed and not continue).
 
 ### 101 Switching Protocols
-> Speak English?
+> Lidat liao lor!
 
 This means the requester has asked the server to switch protocols and the server is acknowledging that it will do so.
 
 ### 102 Processing (WebDAV; RFC 2518)
-> Can not see? Busy, lah.
+> Cannot see is it? Busy lah.
 
 As a WebDAV request may contain many sub-requests involving file operations, it may take a long time to complete the request. This code indicates that the server has received and is processing the request, but no response is available yet. This prevents the client from timing out and assuming the request was lost.
 
@@ -29,7 +29,7 @@ As a WebDAV request may contain many sub-requests involving file operations, it 
 This class of status codes indicates the action requested by the client was received, understood, accepted and processed successfully.
 
 ### 200 OK
-> Can
+> Confirm guarantee plus chop.
 
 Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.
 
@@ -44,7 +44,7 @@ The request has been fulfilled and resulted in a new resource being created.
 The request has been accepted for processing, but the processing has not been completed. The request might or might not eventually be acted upon, as it might be disallowed when processing actually takes place.
 
 ### 203 Non-Authoritative Information (since HTTP/1.1)
-> I also dunno from where one!
+> I oso dunno from where one!
 
 The server successfully processed the request, but is returning information that may be from another source.
 
@@ -54,20 +54,28 @@ The server successfully processed the request, but is returning information that
 The server successfully processed the request, but is not returning any content. Usually used as a response to a successful delete request.
 
 ### 205 Reset Content
+> You go try again see how
+
 The server successfully processed the request, but is not returning any content. Unlike a 204 response, this response requires that the requester reset the document view.
 
 ### 206 Partial Content
-> And then?
+> Nah! Take some first
 
 The server is delivering only part of the resource (byte serving) due to a range header sent by the client. The range header is used by tools like wget to enable resuming of interrupted downloads, or split a download into multiple simultaneous streams.
 
 ### 207 Multi-Status (WebDAV; RFC 4918)
+> Dis one got many kind one
+
 The message body that follows is an XML message and can contain a number of separate response codes, depending on how many sub-requests were made.
 
 ### 208 Already Reported (WebDAV; RFC 5842)
+> Tell you last time liao
+
 The members of a DAV binding have already been enumerated in a previous reply to this request, and are not being included again.
 
 ### 226 IM Used (RFC 3229)
+> Siao liao, so many people kar cheow
+
 The server has fulfilled a request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.
 
 
@@ -79,7 +87,7 @@ A user agent may carry out the additional action with no user interaction only i
 
 
 ### 300 Multiple Choices
-> Wait, I blur...
+> Wait ar, I a bit blur...
 
 Indicates multiple options for the resource that the client may follow. It, for instance, could be used to present different format options for video, list files with different extensions, or word sense disambiguation.
 
@@ -89,7 +97,7 @@ Indicates multiple options for the resource that the client may follow. It, for 
 This and all future requests should be directed to the given URI.
 
 ### 302 Found
-> Find oredi
+> Find oledi
 
 This is an example of industry practice contradicting the standard. The HTTP/1.0 specification (RFC 1945) required the client to perform a temporary redirect (the original describing phrase was "Moved Temporarily"), but popular browsers implemented 302 with the functionality of a 303 See Other. Therefore, HTTP/1.1 added status codes 303 and 307 to distinguish between the two behaviours. However, some Web applications and frameworks use the 302 status code as if it were the 303.
 
@@ -99,14 +107,18 @@ This is an example of industry practice contradicting the standard. The HTTP/1.0
 The response to the request can be found under another URI using a GET method. When received in response to a POST (or PUT/DELETE), it should be assumed that the server has received the data and the redirect should be issued with a separate GET message.
 
 ### 304 Not Modified
-> Got oredi!
+> Got oledi!
 
 Indicates that the resource has not been modified since the version specified by the request headers If-Modified-Since or If-None-Match. This means that there is no need to retransmit the resource, since the client still has a previously-downloaded copy.
 
 ### 305 Use Proxy (since HTTP/1.1)
+> You go talk to proxy first
+
 The requested resource is only available through a proxy, whose address is provided in the response. Many HTTP clients (such as Mozilla and Internet Explorer) do not correctly handle responses with this status code, primarily for security reasons.
 
 ### 306 Switch Proxy
+> Everything else go through proxy ar!
+
 No longer used. Originally meant "Subsequent requests should use the specified proxy."
 
 ### 307 Temporary Redirect (since HTTP/1.1)
@@ -126,7 +138,7 @@ The 4xx class of status code is intended for cases in which the client seems to 
 
 
 ### 400 Bad Request
-> Hah?
+> Huh? What talking you!?
 
 The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).
 
@@ -143,12 +155,12 @@ Similar to 403 Forbidden, but specifically for use when authentication is requir
 Reserved for future use. The original intention was that this code might be used as part of some form of digital cash or micropayment scheme, but that has not happened, and this code is not usually used. YouTube uses this status if a particular IP address has made excessive requests, and requires the person to enter a CAPTCHA.
 
 ### 403 Forbidden
-> Cannot
+> You think cat and dog all can come ar?
 
 The request was a valid request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference.
 
 ### 404 Not Found
-> Dun have
+> Dun have leh
 
 The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible.
 
@@ -158,12 +170,12 @@ The requested resource could not be found but may be available again in the futu
 A request was made of a resource using a request method not supported by that resource; for example, using GET on a form which requires data to be presented via POST, or using PUT on a read-only resource.
 
 ### 406 Not Acceptable
-> Not nice sia
+> Cannot lidat sia
 
 The requested resource is only capable of generating content not acceptable according to the Accept headers sent in the request.
 
 ### 407 Proxy Authentication Required
-> Got scan card or not?
+> You got ask permission or not?
 
 The client must first authenticate itself with the proxy.
 
@@ -173,9 +185,7 @@ The client must first authenticate itself with the proxy.
 The server timed out waiting for the request. According to HTTP specifications: "The client did not produce a request within the time that the server was prepared to wait. The client MAY repeat the request without modifications at any later time."
 
 ### 409 Conflict
-> Jialat!
-
-> Siao liao
+> Jialat! Langah liao liao!
 
 Indicates that the request could not be processed because of conflict in the request, such as an edit conflict in the case of multiple updates.
 
@@ -185,6 +195,8 @@ Indicates that the request could not be processed because of conflict in the req
 Indicates that the resource requested is no longer available and will not be available again. This should be used when a resource has been intentionally removed and the resource should be purged. Upon receiving a 410 status code, the client should not request the resource again in the future. Clients such as search engines should remove the resource from their indices. Most use cases do not require clients and search engines to purge the resource, and a "404 Not Found" may be used instead.
 
 ### 411 Length Required
+> Eh you talk how long ar?
+
 The request did not specify the length of its content, which is required by the requested resource.
 
 ### 412 Precondition Failed
@@ -213,7 +225,7 @@ The request entity has a media type which the server or resource does not suppor
 The client has asked for a portion of the file (byte serving), but the server cannot supply that portion. For example, if the client asked for a part of the file that lies beyond the end of the file.
 
 ### 417 Expectation Failed
-> Why you like dat!
+> Why you so lidat!
 
 The server cannot meet the requirements of the Expect request-header field.
 
@@ -228,6 +240,8 @@ This code was defined in 1998 as one of the traditional IETF April Fools' jokes,
 Not a part of the HTTP standard, 419 Authentication Timeout denotes that previously valid authentication has expired. It is used as an alternative to 401 Unauthorized in order to differentiate from otherwise authenticated clients being denied access to specific server resources.
 
 ### 420 Method Failure (Spring Framework)
+> You do lidat chui liao lor
+
 Not part of the HTTP standard, but defined by Spring in the HttpStatus class to be used when a method failed. This status code is deprecated by Spring.
 
 ### 420 Enhance Your Calm (Twitter)
@@ -236,7 +250,7 @@ Not part of the HTTP standard, but defined by Spring in the HttpStatus class to 
 Not part of the HTTP standard, but returned by version 1 of the Twitter Search and Trends API when the client is being rate limited. Other services may wish to implement the 429 Too Many Requests response code instead.
 
 ### 422 Unprocessable Entity (WebDAV; RFC 4918)
-> Too cheem oredi (DAV)
+> Too cheem oledi (DAV)
 
 The request was well-formed but was unable to be followed due to semantic errors.
 
@@ -246,6 +260,8 @@ The request was well-formed but was unable to be followed due to semantic errors
 The resource that is being accessed is locked.
 
 ### 424 Failed Dependency (WebDAV; RFC 4918)
+> Just now that guy chui
+
 The request failed due to failure of a previous request (e.g., a PROPPATCH).
 
 ### 426 Upgrade Required
@@ -254,6 +270,8 @@ The request failed due to failure of a previous request (e.g., a PROPPATCH).
 The client should switch to a different protocol such as TLS/1.0.
 
 ### 428 Precondition Required (RFC 6585)
+> Must tell me when to do dis
+
 The origin server requires the request to be conditional. Intended to prevent "the 'lost update' problem, where a client GETs a resource's state, modifies it, and PUTs it back to the server, when meanwhile a third party has modified the state on the server, leading to a conflict."
 
 ### 429 Too Many Requests (RFC 6585)
@@ -272,13 +290,17 @@ The server is unwilling to process the request because either an individual head
 A Microsoft extension. Indicates that your session has expired.
 
 ### 444 No Response (Nginx)
+> Si si si, si lang tao ar!
+
 Used in Nginx logs to indicate that the server has returned no information to the client and closed the connection (useful as a deterrent for malware).
 
 ### 449 Retry With (Microsoft)
+> Try liao come back k
+
 A Microsoft extension. The request should be retried after performing the appropriate action.
 
 ### 450 Blocked by Windows Parental Controls (Microsoft)
-> Daddy say cannot do one.
+> Orh hor... I go tell daddy!
 
 A Microsoft extension. This error is given when Windows Parental Controls are turned on and are blocking access to the given webpage.
 
@@ -297,12 +319,13 @@ The client is supposed to re-run the HTTP Autodiscovery protocol to find a bette
 > Empty ah? Everybody leh?
 
 ### 453 Not Enough Bandwidth
-> Overload oredi. Sorry Singtel, not MyRepublic
+> Overload oledi. Sorry Singtel, not MyRepublic
 
 ### 454 Session Not Found
 > Where got session?
 
 ### 455 Method Not Valid in This State
+> Dis one here cannot
 
 ### 456 Header Field Not Valid for Resource
 > Tao nao pai sibo
@@ -311,6 +334,7 @@ The client is supposed to re-run the HTTP Autodiscovery protocol to find a bette
 > Sibei Jialat
 
 ### 458 Parameter Is Read-Only
+> Dis one see see only
 
 ### 459 Aggregate operation not allowed
 > Limpeh say cannot gather gather like this ah
