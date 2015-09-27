@@ -32,6 +32,7 @@ As a WebDAV request may contain many sub-requests involving file operations, it 
 This class of status codes indicates the action requested by the client was received, understood, accepted and processed successfully.
 
 ### 200 OK
+> Can
 > Confirm guarantee plus chop.
 
 Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.
